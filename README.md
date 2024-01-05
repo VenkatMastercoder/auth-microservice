@@ -1,6 +1,6 @@
 # SaaS Backend Template
 
-This is a template for a SaaS (Software as a Service) backend project built with Node.js, Express, Docker, Docker Compose, NGINX, Jenkins, Sentry, Prisma ORM, Redis and Swagger. It follows an MVC architecture with a service-oriented design.
+This is a template for a SaaS (Software as a Service) backend project built with Node.js, Express, Docker, Docker Compose, NGINX, Jenkins, Sentry, Prisma ORM, Zod, Redis, Swagger. It follows a microservices architecture with an MVC design and service-oriented principles.
 
 ## Authors
 
@@ -18,6 +18,7 @@ This is a template for a SaaS (Software as a Service) backend project built with
 - Jenkins
 - Sentry
 - Prisma ORM
+- Zod
 - Redis
 - swagger
 
