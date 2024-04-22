@@ -51,17 +51,17 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 app.get(
-  "/v1/service-one/debug-sentry",
+  "/v1/microservices/debug-sentry",
   function mainHandler(_req: Request, _res: Response) {
     throw new Error("My first Sentry error!");
   }
 );
 
 app.get(
-  "/v1/service-one/test",
+  "/v1/microservices/test",
   function mainHandler(_req: Request, res: Response) {
     res.json({
-      message: "Sample Message from Venkat Starter Template from Service - 1",
+      message: "Sample Message from Venkatesan Starter Microservices Authentication Template",
     });
   }
 );
