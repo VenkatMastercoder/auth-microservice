@@ -22,6 +22,52 @@ This is a template for a SaaS (Software as a Service) backend project built with
 - Redis
 - swagger
 
+# Project structure
+```
+project-root/
+|-- 📂 microservices/
+|   |-- 📂 authentication/
+|   |   |-- 📂 src/
+|   |   |   |-- 📄 server.ts
+|   |   |   |-- 📂 api/
+|   |   |       |-- 📂 v1/
+|   |   |           |-- 📂 controllers/
+|   |   |           |   |-- 📄 AuthController.ts
+|   |   |           |-- 📂 models/
+|   |   |           |   |-- 📂 prisma/
+|   |   |           |       |-- 📄 client.ts
+|   |   |           |       |-- 📂 migrations/
+|   |   |           |           |-- ...
+|   |   |           |       |-- 📄 User.ts
+|   |   |           |-- 📂 routes/
+|   |   |           |   |-- 📄 authRoutes.ts
+|   |   |           |-- 📂 services/
+|   |   |           |   |-- 📄 AuthService.ts
+|   |   |           |-- 📂 types/
+|   |   |               |-- 📄 AuthTypes.ts
+|   |   |-- 📂 config/
+|   |   |   |-- 📂 swagger/
+|   |   |       |-- 📄 api.yaml
+|   |   |   |-- 📄 constants.ts
+|   |   |-- 📂 prisma/
+|   |   |   |-- 📄 schema.prisma
+|   |   |   |-- 📄 client.ts
+|   |   |-- 📂 scripts/
+|   |   |   |-- 📄 seed.ts
+|   |   |   |-- 📄 migrate.ts
+|   |   |   |-- 📄 test.ts
+|-- 📂 Jenkins/
+|   |-- 📄 Jenkinsfile
+|-- 📂 nginx/
+|   |-- 📄 default.conf
+|-- 📄 docker-compose-dev.yml
+|-- 📄 docker-compose-prod.yml
+|-- 📄 docker-compose.yml
+|-- 🔒 .env
+|-- 📄 tsconfig.json
+|-- 📄 package.json
+|-- 📄 README.md
+```
 
 ## API Reference
 
@@ -29,12 +75,6 @@ This is a template for a SaaS (Software as a Service) backend project built with
 
 ```http
   GET /v1/service-one/test
-```
-
-#### Test Micro Service Two
-
-```http
-  GET /v1/service-two/test
 ```
 
 ## Deployment

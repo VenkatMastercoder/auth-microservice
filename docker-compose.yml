@@ -17,12 +17,3 @@ services:
       - PORT=8001
     env_file:
       - microservices\service-one\.env
-
-  service-two:
-    build: .
-    expose:
-      - "8001"
-    environment:
-      - PORT=8002
-    env_file:
-      - microservices\service-two\.env
