@@ -55,6 +55,6 @@ const createJwtToken = (user: any) => {
 };
 
 const sendVerificationEmail = async (user: any, token: any) => {
-  const link = `https://www.yourdomain.com/verify-account/${token}`;
+  const link = `${process.env.DOMAIN_LINK}/verify-account/${token}`;
   return sendMail(user.email, 'Verify Email Address', link);
 };

@@ -34,7 +34,7 @@ export const verifyEmailController = async (
       };
 
       const token = jwt.sign(payload, jwtSecret);
-      const link = `https://www.yourdomain.com/verify-account/${token}`;
+      const link = `${process.env.DOMAIN_LINK}/verify-account/${token}`;
 
       await sendMail(email, "Verfiy Email id", link);
 

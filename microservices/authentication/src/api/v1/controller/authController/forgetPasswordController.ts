@@ -47,7 +47,7 @@ const generateForgetPasswordToken = async (email: string, user: any) => {
 
 // Function to send forget password email
 const sendForgetPasswordEmail = async (email: string, user: any, token: string) => {
-  const link = `https://www.yourdomain.com/reset-password/${user.user_id}/${token}`;
+  const link = `${process.env.DOMAIN_LINK}/reset-password/${user.user_id}/${token}`;
   const responseMessage = await sendMail(email, 'Forget Password Mail', link);
   return responseMessage;
 };
