@@ -79,6 +79,9 @@ GET /v1/microservices/test
 
 ## API Reference
 
+[![Postman Documentation](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/27330023/2sA3Bq4B5p#4aa84980-c3ae-4899-bbc7-85ba632f638d)
+
+
 #### Authentication Routes
 
 ```http
