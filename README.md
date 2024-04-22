@@ -74,7 +74,7 @@ project-root/
 #### Test Microservices Service
 
 ```http
-  GET /v1/microservices/test
+GET /v1/microservices/test
 ```
 
 ## API Reference
@@ -136,8 +136,8 @@ POST /v1/auth/activate-account
   - 400 Bad Request: If the activation token is invalid or expired.
   - 500 Internal Server Error: If there's an error processing the request.
 
-```http POST
-/v1/auth/verify-email
+```http
+POST /v1/auth/verify-email
 ```
 
 - Description: Verify user email address.
@@ -202,11 +202,11 @@ Feel free to adjust the descriptions and details according to your specific impl
 Clone the repository
 
 ```bash
-git clone https://github.com/VenkatMastercoder/SaaS-Backend-Starter-Template
+git clone https://github.com/VenkatMastercoder/auth-microservice
 ```
 
 ```bash
-cd SaaS-Backend-Authentication-Starter-Template
+cd auth-microservice
 ```
 
 Docker Setup
