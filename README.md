@@ -79,22 +79,6 @@ project-root/
 
 ## API Reference
 
-### Routes
-
-#### User Routes
-
-```http
-GET /v1/user/:id
-```
-
-- Description: Get user information by ID.
-- Request parameters:
-  - id: User ID (required)
-- Response:
-  - 200 OK: Returns user information.
-  - 404 Not Found: If the user with the provided ID does not exist.
-  - 500 Internal Server Error: If there's an error processing the request.
-
 #### Authentication Routes
 
 ```http
@@ -119,7 +103,7 @@ POST /v1/auth/login
 - Description: Authenticate a user.
 - Request body:
   - username: User's username (required)
-  - password: User's password (required)
+  - password: User's password
 - Response:
 
   - 200 OK: Returns an authentication token if the credentials are valid.
@@ -133,6 +117,7 @@ POST /v1/auth/refresh-token
 - Description: Refresh authentication token.
 - Request body:
   - refresh_token: Refresh token (required)
+  - user_id : User Id (required)
 - Response:
 
   - 200 OK: Returns a new authentication token if the refresh token is valid.
@@ -145,7 +130,7 @@ POST /v1/auth/activate-account
 
 - Description: Activate user account using activation token.
 - Request body:
-  - activation_token: Activation token (required)
+  - token: Activation token (required)
 - Response:
   - 200 OK: If the account is successfully activated.
   - 400 Bad Request: If the activation token is invalid or expired.
@@ -157,7 +142,8 @@ POST /v1/auth/activate-account
 
 - Description: Verify user email address.
 - Request body:
-  - email_token: Email verification token (required)
+  - user_id : User Id (required)
+  - email: Email verification token (required)
 - Response:
 
   - 200 OK: If the email is successfully verified.
@@ -170,6 +156,7 @@ POST /v1/auth/change-password
 
 - Description: Change user password.
 - Request body:
+  - user_id : User Id (required)
   - old_password: User's old password (required)
   - new_password: User's new password (required)
 - Response:
@@ -198,8 +185,10 @@ POST /v1/auth/reset-password
 ```
   - Description: Reset user password using reset token.
   - Request body:
-    - reset_token: Password reset token (required)
-    - new_password: User's new password (required)
+    - user_id : User Id (required)
+    - password: User's new password (required)
+    - token: Password reset token (required)
+    
   - Response:
     - 200 OK: If the password is successfully reset.
     - 400 Bad Request: If the request body is invalid or incomplete.
